@@ -4,18 +4,41 @@
   <groupId>simpleconfig</groupId>
   <artifactId>simpleconfig</artifactId>
   <packaging>war</packaging>
-  <version>1.0</version>
-  <name>simpleconfig Maven Webapp</name>
+  <version>0.1</version>
+  <name>SimpleConfig Admin</name>
   <url>http://maven.apache.org</url>
   <dependencies>
+    <!-- Amazon -->
+    <dependency>
+      <groupId>com.amazonaws</groupId>
+      <artifactId>aws-java-sdk</artifactId>
+      <version>1.0.003</version>
+    </dependency>
+    <dependency>
+      <groupId>net.sf.saxon</groupId>
+      <artifactId>saxon9he</artifactId>
+      <version>9.2.1.1j</version>
+    </dependency>
+
+    <!-- Testing -->
     <dependency>
       <groupId>junit</groupId>
       <artifactId>junit</artifactId>
-      <version>3.8.1</version>
+      <version>4.7</version>
       <scope>test</scope>
     </dependency>
   </dependencies>
   <build>
     <finalName>simpleconfig</finalName>
+    <plugins>
+      <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
+        <artifactId>maven-compiler-plugin</artifactId>
+        <configuration>
+          <source>1.6</source>
+          <target>1.6</target>
+        </configuration>
+      </plugin>
+    </plugins>
   </build>
 </project>
